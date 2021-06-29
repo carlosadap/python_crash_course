@@ -28,3 +28,33 @@ print(mult_3)
 ten_cubes = [value**3 for value in range(1, 11)]
 
 print(ten_cubes)
+
+# 4.10. Slices:
+
+print("The first three items in the list are:")
+
+for item in ten_cubes[:3]:
+  print(item)
+
+print("Three items from the middle of the list are:")
+
+for item in ten_cubes[3:7]:
+  print(item)
+
+print("The last tree items from the  list are:")
+
+for item in ten_cubes[-3:]:
+  print(item)
+
+# 4.11. My pizzas, your pizzas
+
+friend_pizzas = pizzas[:]
+
+pizzas.append("new_type")
+friend_pizzas.append("dif_type")
+
+for pizza in pizzas:
+  print(pizza)
+
+for pizza in friend_pizzas:
+  print(pizza)
