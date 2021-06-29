@@ -58,3 +58,19 @@ for pizza in pizzas:
 
 for pizza in friend_pizzas:
   print(pizza)
+
+# Tuples
+
+## 4-13. Buffet
+
+rest_foods = ("rice", "meat", "eggs", "spam", "foo")
+
+for food in rest_foods:
+  print(food)
+
+# rest_foods[2] = "bread"
+
+rest_foods = ("rice", "bread", "mayo", "spam", "foo")
+
+for food in rest_foods:
+  print(food)
