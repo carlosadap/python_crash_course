@@ -5,7 +5,8 @@ class Restaurant:
         self.number_served = 0
 
     def decribe_restaurant(self):
-        print(f"This restaurant is called {self.name} and its cuisine is {self.type}")
+        print(
+            f"This restaurant is called {self.name} and its cuisine is {self.type}")
 
     def open_restaurant(self):
         print("The restaurant is open")
@@ -37,3 +38,16 @@ rest_1.set_number_served(5)
 print(rest_1.number_served)
 rest_1.increment_number_served(3)
 print(rest_1.number_served)
+
+
+class IceCreamStand(Restaurant):
+    def __init__(self, name, type, flavors):
+        super().__init__(name, type)
+        self.flavors = flavors
+
+    def describe_flavors(self):
+        print(self.flavors)
+
+my_ice_cream_stand = IceCreamStand("Picolé caseiro", "Caicó", ["Uva", "Mamão", "Abacaxi"])
+
+my_ice_cream_stand.describe_flavors()

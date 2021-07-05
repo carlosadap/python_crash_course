@@ -33,3 +33,16 @@ user_0.increment_login_attempts()
 print(user_0.login_attempts)
 user_0.reset_login_attempts()
 print(user_0.login_attempts)
+
+class Admin(User):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = ["can add post", "can ban user", "and so on"]
+
+    def show_privileges(self):
+        print("The Admin:")
+        for privilege in self.privileges:
+            print(f"- {privilege.title()}")
+
+my_admin = Admin("Foo", "Spam")
+my_admin.show_privileges()
