@@ -16,6 +16,7 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 
+
 user_0 = User("John", "Doe")
 user_1 = User("Jon", "Doeh")
 user_2 = User("Joh", "Doen")
@@ -34,9 +35,9 @@ print(user_0.login_attempts)
 user_0.reset_login_attempts()
 print(user_0.login_attempts)
 
-class Admin(User):
-    def __init__(self, first_name, last_name):
-        super().__init__(first_name, last_name)
+
+class Privileges:
+    def __init__(self):
         self.privileges = ["can add post", "can ban user", "and so on"]
 
     def show_privileges(self):
@@ -44,5 +45,18 @@ class Admin(User):
         for privilege in self.privileges:
             print(f"- {privilege.title()}")
 
+
+class Admin(User):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges()
+
+    # def show_privileges(self):
+    #     print("The Admin:")
+    #     for privilege in self.privileges:
+    #         print(f"- {privilege.title()}")
+
+
 my_admin = Admin("Foo", "Spam")
-my_admin.show_privileges()
+# my_admin.show_privileges()
+my_admin.privileges.show_privileges()
