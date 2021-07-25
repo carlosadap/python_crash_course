@@ -1,0 +1,4 @@
+In python you can code.
+In python you can make stuff.
+In python you can automate thigs.
+In python you can create objects.
